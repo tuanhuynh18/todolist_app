@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void addItem(View view) {
         EditText input = findViewById(R.id.editText);
+        //input.requestFocus();
         String itemText = input.getText().toString();
 
         if (!(itemText.equals(""))) {
