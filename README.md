@@ -1,16 +1,16 @@
 # todolist_app
 
 ## Set up back-end:
-install pipenv here https://pypi.org/project/pipenv/
-run this command after install pipenv (make sure you at the back-end folder in terminal):
-    $ pipenv install
-    $ pipenv shell
-    $ python manage.py makemigrations
-    $ python manage.py makemigrations todo_list
-    $ python manage.py migrate
-    $ python manage.py createsuperuser
-    (follow to step as you will be prompted create an admin account)
-    $ python manage.py runserver
+*install pipenv here https://pypi.org/project/pipenv/
+*run this command after install pipenv (make sure you at the back-end folder in terminal):
+    *$ pipenv install
+    *$ pipenv shell
+    *$ python manage.py makemigrations
+    *$ python manage.py makemigrations todo_list
+    *$ python manage.py migrate
+    *$ python manage.py createsuperuser
+        **(follow to step as you will be prompted create an admin account)
+    *$ python manage.py runserver
 
 ## API Endpoints: 
 ### status code
