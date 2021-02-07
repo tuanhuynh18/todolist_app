@@ -34,7 +34,14 @@ def get_tasks_view(request):
 
 @api_view(['POST'])
 def delete_task_view(request):
-    return Response({'hello': 'world'})
+    # get param
+    body_unicode = request.body.decode('utf-8')
+    request_params = json.loads(body_unicode)
+    task_id = request_params['task_id']
+    # get task
+    task = Task.objects.get(id=task_id)
+    task.delete()
+    return Response({"message": "delete success"}, status= 200)
 
 @api_view(['POST'])
 def update_task_view(request):
