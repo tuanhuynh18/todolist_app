@@ -3,10 +3,21 @@ from rest_framework.response import Response
 from .serializers import TaskSerializer
 from django.contrib.auth.models import User
 import json
+from rest_framework import status
 
 @api_view(['POST'])
 def create_task_view(request):
-    return Response({'hello': 'world'})
+    # get param
+    body_unicode = request.body.decode('utf-8')
+    request_params = json.loads(body_unicode)
+    username = request_params['username']
+    serializer = TaskSerializer(data=request.data)
+    if serializer.is_valid():
+        user = User.objects.get(username=username)
+        print('here')
+        task = serializer.save(user=user)
+        Response(serializer.data, status=200)
+    return Response({}, status=400)
 
 @api_view(['POST'])
 def get_tasks_view(request):
