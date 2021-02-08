@@ -24,7 +24,7 @@ def get_tasks_view(request):
     # get param
     body_unicode = request.body.decode('utf-8')
     request_params = json.loads(body_unicode)
-    username = request_params['username']
+    username = request_params[0]['username']
     # get user
     user = User.objects.get(username=username)
     # get tasks based on user
