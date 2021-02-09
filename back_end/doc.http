@@ -1,42 +1,11 @@
 
 ## Sample REST API Calls
 
-POST http://127.0.0.1:8000/api/get-tasks/ HTTP/1.1
+POST http://127.0.0.1:8000/dj-rest-auth/login/ HTTP/1.1
 Content-Type: application/json
 
-[{
-    "username": "jasonishandsome"
-}]
+{   
+    "username": "jasonishandsome",
+    "password": "tuanisnot"
+}
 
-<!-- 
-
-    admin/
-    dj-rest-auth/
-    dj-rest-auth/registration/
-    api/get-tasks/
-    api/delete-task/
-    api/update-task/
-    api/create-task/
-
-    ### Registration
-    POST http://127.0.0.1:8000/dj-rest-auth/registration/ HTTP/1.1
-    Content-Type: application/json
-
-    {
-        "username": "jasonishandsome",
-        "password": "tuanisnot"
-    }
-
-    ### Login
-    POST http://127.0.0.1:8000/dj-rest-auth/login/ HTTP/1.1
-    Content-Type: application/json
-
-    {
-        "username": "jasonishandsome",
-        "password1": "tuanisnot",
-        "password2": "tuanisnot",
-        "email": "jasonishandsome@yahoo.com"
-    }
-
-
--->
